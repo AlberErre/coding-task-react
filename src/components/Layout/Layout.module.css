@@ -1,0 +1,10 @@
+.layout > main {
+  margin: 72px 54px;
+}
+
+@media (max-width: 640px) {
+  .layout > main {
+    margin: 30px 20px
+  }
+}
+

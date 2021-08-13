@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { GenreSelector } from '../components/GenreSelector';
-import { Layout } from '../components/Layout';
+import { Layout } from '../components/Layout/Layout';
 import { useGenres } from '../hooks/useGenres';
 
 const IndexPage = () => {

@@ -1,6 +1,6 @@
-import './GenreSelector.module.css';
-
 import React from 'react';
+
+import styles from './GenreSelector.module.css';
 
 export const GenreSelector = ({
   id = 'genreSelector',
@@ -14,7 +14,7 @@ export const GenreSelector = ({
   };
 
   return (
-    <div className="selectorContainer">
+    <div className={styles.selectorContainer}>
       <label htmlFor={id}>Sort by: </label>
       <select id={id} name={name} onChange={handleChange}>
         <option selected value="alphabetical">
