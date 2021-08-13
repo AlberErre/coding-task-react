@@ -2,7 +2,7 @@ import { Layout } from '../components/Layout';
 import { useGenres } from '../hooks/useGenres';
 
 const IndexPage = () => {
-  const { genres } = useGenres();
+  const { popularGenres: genres } = useGenres();
 
   const numberOfshows = genres.reduce((acc, genre) => acc + genre.numShows, 0);
 

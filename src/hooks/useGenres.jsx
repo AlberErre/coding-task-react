@@ -10,5 +10,7 @@ export const useGenres = () => {
     setGenres(sourceGenres || []);
   }, [sourceGenres]);
 
-  return { genres };
+  const popularGenres = genres.filter((genre) => genre.numShows > 4);
+
+  return { genres, popularGenres };
 };
