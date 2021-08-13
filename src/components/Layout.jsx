@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-export const Layout = ({ children, title = 'ACB Coding Task' }) => (
+export const Layout = ({ children, title = 'ACB Coding Task <> Alberto' }) => (
   <div>
     <Head>
       <title>{title}</title>
