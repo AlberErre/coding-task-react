@@ -1,3 +1,4 @@
+import { GenreSelector } from '../components/GenreSelector';
 import { Layout } from '../components/Layout';
 import { useGenres } from '../hooks/useGenres';
 
@@ -13,7 +14,11 @@ const IndexPage = () => {
   return (
     <Layout title={title}>
       <section>
-        <h1>{title}</h1>
+        <div className="spaceBetweenItems">
+          <h1>{title}</h1>
+          <GenreSelector />
+        </div>
+
         <ul>
           {genres.map(({ id, title: genreTitle }) => (
             <li key={id}>{genreTitle}</li>
