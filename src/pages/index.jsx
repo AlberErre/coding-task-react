@@ -7,13 +7,22 @@ import { useGenres } from '../hooks/useGenres';
 
 const IndexPage = () => {
   const [genreOrder, setGenreOrder] = useState('alphabetical');
+  const [likedGenres, setLikedGenres] = useState([]);
 
   const { popularGenres: genres } = useGenres(genreOrder);
 
   const numberOfshows = genres.reduce((acc, genre) => acc + genre.numShows, 0);
   const title = `Shows by Genre (${numberOfshows})`;
 
-  const onLike = () => {};
+  const onLike = (genreId) => {
+    // NOTE: remove it in case it was previously liked
+    if (likedGenres.includes(genreId)) {
+      setLikedGenres(likedGenres.filter((id) => id !== genreId));
+      return;
+    }
+
+    setLikedGenres([...likedGenres, genreId]);
+  };
 
   // TODO: navigate to an error page on this condition
   if (!genres.length) return null;
@@ -22,7 +31,7 @@ const IndexPage = () => {
     <Layout title={title}>
       <section>
         <GenreHeader setGenreOrder={setGenreOrder} title={title} />
-        <GenreList genres={genres} onLike={onLike} />
+        <GenreList genres={genres} likedGenres={likedGenres} onLike={onLike} />
       </section>
     </Layout>
   );

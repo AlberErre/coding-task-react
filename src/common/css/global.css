@@ -46,3 +46,7 @@ body {
   line-height: normal;
   -webkit-appearance: none;
 }
+
+.invisibleText {
+  visibility: hidden;
+}
