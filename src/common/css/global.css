@@ -1,8 +1,6 @@
 /* Reset */
 html {
   box-sizing: border-box;
-
-  font-size: 17px;
 }
 
 *,
@@ -24,19 +22,8 @@ h6 {
   padding: 0;
 }
 
-h1 {
-  font-size: 2rem;
-}
-
 /* Bare elements */
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 100%;
-}
-
-.spaceBetweenItems {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
 }

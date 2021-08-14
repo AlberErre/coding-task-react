@@ -1,10 +1,9 @@
 .layout > main {
-  margin: 72px 54px;
+  margin: 7.06vh 3.74vw;
 }
 
 @media (max-width: 640px) {
   .layout > main {
-    margin: 30px 20px
+    margin: 3.7vh 5.35vw;
   }
 }
-
