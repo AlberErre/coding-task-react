@@ -38,6 +38,7 @@
     "extends @acolorbright/browserslist-config"
   ],
   "dependencies": {
+    "classnames": "^2.3.1",
     "next": "10.2.3",
     "react": "17.0.1",
     "react-dom": "17.0.1"

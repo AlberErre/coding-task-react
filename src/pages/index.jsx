@@ -13,6 +13,8 @@ const IndexPage = () => {
   const numberOfshows = genres.reduce((acc, genre) => acc + genre.numShows, 0);
   const title = `Shows by Genre (${numberOfshows})`;
 
+  const onLike = () => {};
+
   // TODO: navigate to an error page on this condition
   if (!genres.length) return null;
 
@@ -20,7 +22,7 @@ const IndexPage = () => {
     <Layout title={title}>
       <section>
         <GenreHeader setGenreOrder={setGenreOrder} title={title} />
-        <GenreList genres={genres} />
+        <GenreList genres={genres} onLike={onLike} />
       </section>
     </Layout>
   );

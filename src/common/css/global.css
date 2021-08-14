@@ -27,3 +27,22 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 100%;
 }
+
+.buttonReset {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+
+  border: none;
+
+  background: transparent;
+
+  color: inherit;
+  font: inherit;
+
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  line-height: normal;
+  -webkit-appearance: none;
+}
