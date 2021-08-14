@@ -1,5 +1,18 @@
 import '@testing-library/jest-dom/extend-expect';
 
+import * as nextRouter from 'next/router';
+
+nextRouter.useRouter = jest.fn();
+nextRouter.useRouter.mockImplementation(() => ({
+  push: jest.fn(),
+  basePath: '',
+  pathname: '/',
+  route: '/',
+  reload: jest.fn(),
+  back: jest.fn(),
+  prefetch: jest.fn().mockResolvedValue(undefined),
+}));
+
 import { toHaveNoViolations } from 'jest-axe';
 import { render } from '@testing-library/react';
 
