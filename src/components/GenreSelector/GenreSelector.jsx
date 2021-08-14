@@ -6,6 +6,7 @@ export const GenreSelector = ({
   id = 'genreSelector',
   name = 'Genre Selector',
   onChange,
+  defaultValue = 'alphabetical',
 }) => {
   const handleChange = (event) => {
     if (!onChange) return;
@@ -16,10 +17,13 @@ export const GenreSelector = ({
   return (
     <div className={styles.selectorContainer}>
       <label htmlFor={id}>Sort by: </label>
-      <select id={id} name={name} onChange={handleChange}>
-        <option selected value="alphabetical">
-          Alphabetical
-        </option>
+      <select
+        defaultValue={defaultValue}
+        id={id}
+        name={name}
+        onChange={handleChange}
+      >
+        <option value="alphabetical">Alphabetical</option>
         <option value="showsNumber">No of shows</option>
       </select>
     </div>
