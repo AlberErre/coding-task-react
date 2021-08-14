@@ -1,0 +1,22 @@
+.genreList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(139px, 1fr));
+
+  margin: 30px 0;
+  padding-left: 0;
+
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .genreList {
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  }
+}
+
+@media (min-width: 1441px) {
+  .genreList {
+    grid-template-columns: repeat(8, minmax(139px, 1fr));
+  }
+}
