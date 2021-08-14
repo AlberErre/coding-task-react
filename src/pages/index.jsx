@@ -3,11 +3,13 @@ import { useState } from 'react';
 import { GenreHeader } from '../components/GenreHeader';
 import { GenreList } from '../components/GenreList';
 import { Layout } from '../components/Layout/Layout';
+import { useLikedGenresContext } from '../context/LikedGenres';
 import { useGenres } from '../hooks/useGenres';
 
 const IndexPage = () => {
+  const { likedGenres, setLikedGenres } = useLikedGenresContext();
+
   const [genreOrder, setGenreOrder] = useState('alphabetical');
-  const [likedGenres, setLikedGenres] = useState([]);
 
   const { popularGenres: genres } = useGenres(genreOrder);
 
@@ -31,7 +33,7 @@ const IndexPage = () => {
     <Layout title={title}>
       <section>
         <GenreHeader setGenreOrder={setGenreOrder} title={title} />
-        <GenreList genres={genres} likedGenres={likedGenres} onLike={onLike} />
+        <GenreList genres={genres} onLike={onLike} />
       </section>
     </Layout>
   );

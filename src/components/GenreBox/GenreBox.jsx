@@ -1,17 +1,13 @@
 import React from 'react';
 
+import { useLikedGenresContext } from '../../context/LikedGenres';
 import { LikeButton } from '../LikeButton';
 import styles from './GenreBox.module.css';
 
-export const GenreBox = ({
-  id,
-  color,
-  numShows,
-  title,
-  onLike,
-  likedGenres,
-}) => {
+export const GenreBox = ({ id, color, numShows, title, onLike }) => {
   const onClick = () => onLike(id);
+
+  const { likedGenres } = useLikedGenresContext();
 
   const isLiked = likedGenres.includes(id);
 
