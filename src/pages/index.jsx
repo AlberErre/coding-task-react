@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
-import { GenreSelector } from '../components/GenreSelector';
+import { GenreHeader } from '../components/GenreHeader';
+import { GenreList } from '../components/GenreList';
 import { Layout } from '../components/Layout/Layout';
 import { useGenres } from '../hooks/useGenres';
 
@@ -18,16 +19,8 @@ const IndexPage = () => {
   return (
     <Layout title={title}>
       <section>
-        <div className="spaceBetweenItems">
-          <h1>{title}</h1>
-          <GenreSelector onChange={setGenreOrder} />
-        </div>
-
-        <ul>
-          {genres.map(({ id, title: genreTitle }) => (
-            <li key={id}>{genreTitle}</li>
-          ))}
-        </ul>
+        <GenreHeader setGenreOrder={setGenreOrder} title={title} />
+        <GenreList genres={genres} />
       </section>
     </Layout>
   );

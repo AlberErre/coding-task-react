@@ -1,0 +1,1 @@
+export { GenreHeader } from './GenreHeader';
