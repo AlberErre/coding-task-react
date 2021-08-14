@@ -1,5 +1,6 @@
 import { GenreHeader } from '../components/GenreHeader';
 import { GenreList } from '../components/GenreList';
+import { GenreNavigation } from '../components/GenreNavigation';
 import { Layout } from '../components/Layout/Layout';
 import { useLikedGenresContext } from '../context/LikedGenres';
 import { useGenres } from '../hooks/useGenres';
@@ -31,6 +32,7 @@ const Favourites = () => {
   return (
     <Layout title={title}>
       <section>
+        <GenreNavigation />
         <GenreHeader title={title} />
 
         {!favouriteGenres.length && <p>No favourite genres selected</p>}

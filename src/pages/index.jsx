@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import { GenreHeader } from '../components/GenreHeader';
 import { GenreList } from '../components/GenreList';
+import { GenreNavigation } from '../components/GenreNavigation';
 import { Layout } from '../components/Layout/Layout';
 import { useLikedGenresContext } from '../context/LikedGenres';
 import { useGenres } from '../hooks/useGenres';
@@ -32,7 +33,9 @@ const IndexPage = () => {
   return (
     <Layout title={title}>
       <section>
+        <GenreNavigation />
         <GenreHeader setGenreOrder={setGenreOrder} title={title} />
+
         <GenreList genres={genres} onLike={onLike} />
       </section>
     </Layout>
