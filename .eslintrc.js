@@ -9,6 +9,7 @@ module.exports = {
     'react-hooks',
     'jsx-a11y',
   ],
+  ignorePatterns: ['setupTests.js'],
   rules: {
     'no-restricted-syntax': 0,
     'no-use-before-define': 0,

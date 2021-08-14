@@ -51,7 +51,7 @@
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
     "@commitlint/prompt-cli": "12.1.4",
-    "@testing-library/jest-dom": "5.1.1",
+    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "9.4.0",
     "agnostic-axe": "3.0.3",
     "babel-eslint": "10.1.0",
@@ -66,7 +66,9 @@
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "husky": "4.2.3",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "25.1.0",
+    "jest-axe": "^5.0.1",
     "lint-staged": "10.0.7",
     "prettier": "1.19.1",
     "stylelint": "13.13.0"
