@@ -1,0 +1,37 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 149px;
+
+  color: white;
+}
+
+.box > p {
+  margin: 0;
+}
+
+.box > .title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.box > .subtitle {
+  font-size: 0.8125rem;
+  line-height: 150%;
+}
+
+@media (min-width: 1441px) {
+  .box {
+    width: 149px;
+  }
+}
+
+@media (max-width: 640px) {
+  .box > .subtitle {
+    font-size: 0.75rem;
+  }
+}
