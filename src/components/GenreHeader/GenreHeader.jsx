@@ -10,7 +10,9 @@ export const GenreHeader = ({ title, setGenreOrder }) => {
   return (
     <header className={styles.section}>
       <h1>{title}</h1>
-      {!isMobile && <GenreSelector onChange={setGenreOrder} />}
+      {!isMobile && !!setGenreOrder && (
+        <GenreSelector onChange={setGenreOrder} />
+      )}
     </header>
   );
 };
